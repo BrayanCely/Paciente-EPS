@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
+// Se crean las listas donde se guarden los datos
+
 public class Main {
     private static ArrayList<Usuario> usuarios = new ArrayList<>();
     private static ArrayList<Cita> citas = new ArrayList<>();
@@ -10,10 +12,14 @@ public class Main {
     private static final Color COLOR_NARANJA = new Color(255, 165, 0);
     private static final Color COLOR_NARANJA_CLARO = new Color(255, 200, 100);
 
+    // Damos la bienvenida
+
     public static void main(String[] args) {
         cargarDatosEjemplo();
         mostrarVentanaBienvenida();
     }
+
+    // Se muestran los medicos y la informacion del ususario registrado
 
     private static void cargarDatosEjemplo() {
     
@@ -26,6 +32,8 @@ public class Main {
         
         usuarios.add(new Usuario("BRAYAN ANDRES CELY SILVA", "1990-01-01", "1029143933", "12345", "AC 26 66 A 48 TO A P 6 CS 616", "1234567", "brayan@email.com"));
     }
+
+        // Damos una introduccion a nuestro programa
 
     private static void mostrarVentanaBienvenida() {
         JFrame frame = new JFrame("EPS");
@@ -78,6 +86,8 @@ public class Main {
         frame.setVisible(true);
     }
 
+    // El registro
+
     private static void mostrarVentanaInicio() {
         JFrame frame = new JFrame("EPS");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -119,6 +129,8 @@ public class Main {
         frame.setVisible(true);
     }
 
+    // Hacemos una personalizacion de colores para que se adecue más al prototipo planteado
+
     private static void estiloBotonNaranja(JButton boton) {
         boton.setBackground(COLOR_NARANJA);
         boton.setForeground(Color.WHITE);
@@ -126,6 +138,8 @@ public class Main {
         boton.setFocusPainted(false);
         boton.setBorder(BorderFactory.createRaisedBevelBorder());
     }
+
+    // Mostrar el inicio de sesion
 
     private static void mostrarLogin() {
         JFrame frame = new JFrame("EPS");
@@ -209,6 +223,8 @@ public class Main {
         frame.setVisible(true);
     }
 
+    // Buscamos en la lista, si se encuentra se asigna usuarioLogueado, si no se retorna 
+
     private static boolean autenticarUsuario(String documento, String password) {
         for (Usuario usuario : usuarios) {
             if (usuario.getNumeroIdentificacion().equals(documento) &&
@@ -219,6 +235,8 @@ public class Main {
         }
         return false;
     }
+
+    // Mostramos el registro con informacion  del paciente 
 
     private static void mostrarRegistro() {
         JFrame frame = new JFrame("EPS");
@@ -319,6 +337,8 @@ public class Main {
         frame.setVisible(true);
     }
 
+    //  Pedimos los pasos y las restricciones para el registro
+
     private static boolean validarRegistro(String nombre, String documento, String password) {
         if (nombre.isEmpty() || documento.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Nombre y documento son obligatorios");
@@ -330,6 +350,8 @@ public class Main {
         }
         return true;
     }
+
+    // Damos la bienvenida y mostramos las opciones principales 
 
     private static void mostrarMenuPrincipal() {
         JFrame frame = new JFrame("EPS - " + usuarioLogueado.getNombreCompleto());
@@ -390,6 +412,8 @@ public class Main {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
+    // Damos informacion de los doctores y las citas que se encuentran disponibles 
 
     private static void mostrarCitasDisponibles() {
         JFrame frame = new JFrame("EPS - Citas Disponibles");
@@ -479,6 +503,8 @@ public class Main {
         frame.setVisible(true);
     }
 
+    // Se muestran datos de la cita - doctor - paciente
+
     private static void mostrarDetallesCita(Cita cita) {
         JFrame frame = new JFrame("EPS - Detalles de Cita");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -532,6 +558,8 @@ public class Main {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+    
+    //Muestra las citas ya agendadas
 
     private static void mostrarMisCitas() {
         JFrame frame = new JFrame("EPS - Mis Citas");
@@ -600,6 +628,8 @@ public class Main {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
+    //Muestra la cancelacion de las citas ya agendadas
 
     private static void mostrarSeleccionCancelarCita() {
         JFrame frame = new JFrame("EPS - Seleccionar Cita a Cancelar");
@@ -684,6 +714,8 @@ public class Main {
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
+
+    //Se pide motivo de cancelacion y da opcion de cancelar cita agendada
 
     private static void mostrarCancelarCita(Cita citaACancelar) {
         JFrame frame = new JFrame("EPS - Cancelar Cita");
