@@ -1,3 +1,6 @@
+
+// DEfinimos la clase Medico
+
 public class Medico {
     private String nombre;
     private String especialidad;
