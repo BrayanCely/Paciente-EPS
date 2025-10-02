@@ -11,7 +11,6 @@ public class Cita {
         this.motivo = motivo;
     }
 
-    // Getters
     public Usuario getPaciente() { return paciente; }
     public Medico getMedico() { return medico; }
     public String getFechaHora() { return fechaHora; }
