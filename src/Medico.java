@@ -9,7 +9,7 @@ public class Medico {
         this.horarioAtencion = horarioAtencion;
     }
 
-    // Getters
+    
     public String getNombre() { return nombre; }
     public String getEspecialidad() { return especialidad; }
     public String getHorarioAtencion() { return horarioAtencion; }
