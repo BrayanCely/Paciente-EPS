@@ -18,7 +18,7 @@ public class Usuario {
         this.email = email;
     }
 
-    // Getters
+
     public String getNombreCompleto() { return nombreCompleto; }
     public String getFechaNacimiento() { return fechaNacimiento; }
     public String getNumeroIdentificacion() { return numeroIdentificacion; }
