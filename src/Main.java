@@ -16,14 +16,14 @@ public class Main {
     }
 
     private static void cargarDatosEjemplo() {
-        // Crear médicos exactamente como en la imagen
+    
         medicos.add(new Medico("GIOVANNI A. BRICEÑO", "Medicina familiar", "10:00 AM - 1:00 PM"));
         medicos.add(new Medico("MILLER LOZANO RIVERA", "Cardiologia", "7:00 AM - 10:00 PM"));
         medicos.add(new Medico("JULIO DAVID GIL", "Optometria", "2:00 PM - 4:00 PM"));
         medicos.add(new Medico("CARLOS ANDRES PLAZAS", "Radiografías", "4:00 PM - 6:00 PM"));
         medicos.add(new Medico("RODRIGO CASTRO", "Pediatra", "6:00 PM - 8:00 PM"));
 
-        // Crear usuario de ejemplo
+        
         usuarios.add(new Usuario("BRAYAN ANDRES CELY SILVA", "1990-01-01", "1029143933", "12345", "AC 26 66 A 48 TO A P 6 CS 616", "1234567", "brayan@email.com"));
     }
 
@@ -96,7 +96,7 @@ public class Main {
         JButton btnLogin = new JButton("INICIAR SESIÓN");
         JButton btnRegistro = new JButton("REGISTRO");
 
-        // Aplicar estilo naranja a los botones
+        
         estiloBotonNaranja(btnLogin);
         estiloBotonNaranja(btnRegistro);
 
@@ -237,7 +237,7 @@ public class Main {
         titulo.setForeground(COLOR_NARANJA);
         titulo.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // Campos de registro
+    
         JLabel lblNombre = new JLabel("Nombre completo:");
         JTextField txtNombre = new JTextField();
 
@@ -281,7 +281,6 @@ public class Main {
             }
         });
 
-        // Agregar componentes al panel
         panel.add(titulo);
         panel.add(Box.createRigidArea(new Dimension(0, 20)));
 
@@ -352,7 +351,7 @@ public class Main {
         JButton btnCancelarCita = new JButton("CANCELAR CITA");
         JButton btnCerrarSesion = new JButton("CERRAR SESIÓN");
 
-        // Aplicar estilos a los botones
+        
         estiloBotonNaranja(btnSolicitarCita);
         estiloBotonNaranja(btnVerCitas);
         estiloBotonNaranja(btnCancelarCita);
@@ -417,7 +416,7 @@ public class Main {
         panel.add(subtitulo);
         panel.add(Box.createRigidArea(new Dimension(0, 20)));
 
-        // Crear botones para cada médico
+
         for (Medico medico : medicos) {
             JPanel panelMedico = new JPanel(new BorderLayout());
             panelMedico.setBorder(BorderFactory.createLineBorder(COLOR_NARANJA));
@@ -441,7 +440,7 @@ public class Main {
             btnSeleccionar.setForeground(Color.WHITE);
 
             btnSeleccionar.addActionListener(e -> {
-                // Crear cita con este médico
+               
                 Cita nuevaCita = new Cita(
                         usuarioLogueado,
                         medico,
@@ -497,7 +496,7 @@ public class Main {
         titulo.setForeground(COLOR_NARANJA);
         titulo.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        // Información de la cita
+       
         String detalles =
                 "Paciente: " + cita.getPaciente().getNombreCompleto() + "\n\n" +
                         "Identificación: " + cita.getPaciente().getNumeroIdentificacion() + "\n\n" +
