@@ -1,3 +1,6 @@
+
+// Definimos las caracteristicas de la cita asignada
+
 public class Cita {
     private Usuario paciente;
     private Medico medico;
