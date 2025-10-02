@@ -1,3 +1,6 @@
+
+// Pide la informacion del usuario que el registro
+
 public class Usuario {
     private String nombreCompleto;
     private String fechaNacimiento;
